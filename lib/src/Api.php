@@ -255,7 +255,7 @@ class Api
 
     public function getConverter($file)
     {
-        cli()->lightBlue('Convert at '.get_class($this->converter));
+        cli()->lightGray('Convert at '.get_class($this->converter));
         return $this->converter->setFile($file);
     }
 }
