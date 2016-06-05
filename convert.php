@@ -49,6 +49,7 @@ try {
             continue;
         }
 
+        cli()->br();
         cli()->lightBlue('Start: id='.$args['id'].', pref='.$pref);
 
         $api = new \Converter\Api($args['id'], $pref);
