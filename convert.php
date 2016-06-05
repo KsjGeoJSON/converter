@@ -50,17 +50,19 @@ try {
         }
 
         cli()->br();
-        cli()->lightBlue('Start: id='.$args['id'].', pref='.$pref);
+        cli()->lightBlue()->inline('Start: id='.$args['id'].', pref='.$pref);
 
         $api = new \Converter\Api($args['id'], $pref);
         $dir = $api->getDirectory();
         $file = $dir.$api->pref.'.geojson';
 
         if (empty($args['force']) && is_file($file)) {
-            cli()->yellow('Pref:'.$pref.' Skipped. (JSON already exist)');
+            cli()->yellow()->inline(' Skipped. (JSON already exist)');
             // cli()->br();
             continue;
         }
+
+        cli()->br();
 
         $url = $api->getUrl();
         $files = $api->unZip($url['url']);
