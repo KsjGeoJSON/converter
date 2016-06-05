@@ -1,0 +1,12 @@
+[submodule "AdministrativeBoundary"]
+	path = AdministrativeBoundary
+	url = git@github.com:KsjGeoJSON/AdministrativeBoundary.git
+[submodule "ElementarySchoolDistrict"]
+	path = ElementarySchoolDistrict
+	url = git@github.com:KsjGeoJSON/ElementarySchoolDistrict.git
+[submodule "MiddleSchoolDistrict"]
+	path = MiddleSchoolDistrict
+	url = git@github.com:KsjGeoJSON/MiddleSchoolDistrict.git
+[submodule "MedicalArea"]
+	path = MedicalArea
+	url = git@github.com:KsjGeoJSON/MedicalArea.git
