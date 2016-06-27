@@ -93,11 +93,12 @@ try {
         cli()->yellow('Building README.md...');
         $api = new \Converter\Api($args['id'], '13');
         $url = $api->getUrl();
-        $md .= '## [国土数値情報 '.$url['title'].']';
+        $md .= '# ['.$url['title'].'（'.$api->id.'）]';
         $md .= '(http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-'.$api->id.'.html)'.PHP_EOL.PHP_EOL;
-        $md .= 'データ年: '.$url['year'].'年'.PHP_EOL.PHP_EOL;
-        $md .= PHP_EOL.'| Prefecture | File | Size |'.PHP_EOL;
-        $md .= PHP_EOL.'| ---------- |:----:|-----:|'.PHP_EOL;
+        $md .= '- データ元 : [国土数値情報](http://nlftp.mlit.go.jp/ksj/)'.PHP_EOL;
+        $md .= '- データ年 : '.$url['year'].'年'.PHP_EOL.PHP_EOL;
+        $md .= '| Code | Prefecture | File | Size |'.PHP_EOL;
+        $md .= '|:----:| ---------- |:----:| ----:|'.PHP_EOL;
         foreach(scandir($dir) as $val) {
             if (preg_match('/\A(\d{2})\.geojson\z/i', $val, $m)) {
                 $bytes = filesize($dir.$val);
@@ -110,7 +111,10 @@ try {
                 } elseif ($bytes > 1) {
                     $bytes = $bytes . 'bytes';
                 }
-                $md .= '| '.Prefs::name($m[1]).' | ['.$val.'](./'.$api->json_dir.'/'.$val.') | '.$bytes.' |'.PHP_EOL;
+                $md .= '| '.$m[1].' | '.Prefs::name($m[1]).' | ';
+                $md .= '['.$val.'](./'.$api->json_dir.'/'.$val.') | ';
+                $md .= $bytes.' |'.PHP_EOL;
+                // $md .= '- ['.Prefs::name($m[1]).' ('.$bytes.')](./'.$api->json_dir.'/'.$val.')'.PHP_EOL;
             }
         }
 
