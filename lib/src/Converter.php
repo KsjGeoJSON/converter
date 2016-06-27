@@ -77,7 +77,8 @@ class Converter
         }
 
         if (!$curves = $this->getCurves()) {
-            throw new \Exception('Can\'t get Curves!');
+            return;
+            // throw new \Exception('Can\'t get Curves!');
         }
 
         preg_match_all('@<gml:Surface gml:id="([^"]+)">.*?<gml:Ring>(.*?)</gml:Ring>.*?</gml:Surface>@isu', $this->xml, $m);
