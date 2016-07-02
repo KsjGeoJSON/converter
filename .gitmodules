@@ -13,3 +13,7 @@
 [submodule "PublicFacility"]
 	path = PublicFacility
 	url = git@github.com:KsjGeoJSON/PublicFacility.git
+[submodule "WelfareInstitution"]
+	path = WelfareInstitution
+	url = git@kijtra.github.com:KsjGeoJSON/WelfareInstitution.git
+
