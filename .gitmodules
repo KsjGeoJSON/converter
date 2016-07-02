@@ -17,3 +17,6 @@
 	path = WelfareInstitution
 	url = git@kijtra.github.com:KsjGeoJSON/WelfareInstitution.git
 
+[submodule "AttractCustomersFacility"]
+	path = AttractCustomersFacility
+	url = git@kijtra.github.com:KsjGeoJSON/AttractCustomersFacility.git
