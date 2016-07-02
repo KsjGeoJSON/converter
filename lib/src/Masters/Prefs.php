@@ -1,7 +1,7 @@
 <?php
 namespace Converter\Masters;
 
-class Prefs
+class Prefs extends \Converter\Master
 {
     public static $datas = array(
         '01' => '北海道',
@@ -52,32 +52,4 @@ class Prefs
         '46' => '鹿児島県',
         '47' => '沖縄県',
     );
-
-    public static function get($id)
-    {
-        if (!empty(self::$datas[$id])) {
-            return array(
-                'id' => $id,
-                'name' => self::$datas[$id],
-            );
-        }
-    }
-
-    public static function name($val)
-    {
-        if (!empty(self::$datas[$val])) {
-            return self::$datas[$val];
-        } elseif(false !== array_search(self::$datas, $val)) {
-            return $val;
-        }
-    }
-
-    public static function id($val)
-    {
-        if (!empty(self::$datas[$id])) {
-            return self::$datas[$id];
-        } elseif(false !== ($key = array_search(self::$datas, $val))) {
-            return $key;
-        }
-    }
 }

@@ -10,3 +10,6 @@
 [submodule "MedicalArea"]
 	path = MedicalArea
 	url = git@github.com:KsjGeoJSON/MedicalArea.git
+[submodule "PublicFacility"]
+	path = PublicFacility
+	url = git@github.com:KsjGeoJSON/PublicFacility.git

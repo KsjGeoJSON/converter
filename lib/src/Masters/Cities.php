@@ -1,7 +1,7 @@
 <?php
 namespace Converter\Masters;
 
-class Cities
+class Cities extends \Converter\Master
 {
     public static $datas = array(
         '01101' => '札幌市中央区',
@@ -1906,33 +1906,36 @@ class Cities
         '47375' => '宮古郡多良間村',
         '47381' => '八重山郡竹富町',
         '47382' => '八重山郡与那国町',
+
+        // 合併
+        '01488' => '天塩郡幌延町',
+        '01558' => '紋別郡湧別町',
+        '01439' => '雨竜郡幌加内町',
+        '03305' => '滝沢市',
+        '03422' => '一関市',
+        '03487' => '宮古市',
+        '04603' => '気仙沼市',
+        '07323' => '本宮市',
+        '07324' => '本宮市',
+        '07309' => '福島市',
+        '09365' => '栃木市',
+        '09366' => '栃木市',
+        '09303' => '宇都宮市',
+        '09304' => '宇都宮市',
+        '09321' => '栃木市',
+        '09341' => '真岡市',
+        '09368' => '栃木市',
+        '09367' => '栃木市',
+        '10303' => '前橋市',
+        '10321' => '高崎市',
+        '10363' => '高崎市',
+        '10427' => '吾妻郡中之条町',
+        '' => '',
+        '' => '',
+        '' => '',
+        '' => '',
+        '' => '',
+        '' => '',
+        '' => '',
     );
-
-    public static function get($id)
-    {
-        if (!empty(self::$datas[$id])) {
-            return array(
-                'id' => $id,
-                'name' => self::$datas[$id],
-            );
-        }
-    }
-
-    public static function name($val)
-    {
-        if (!empty(self::$datas[$val])) {
-            return self::$datas[$val];
-        } elseif(false !== array_search(self::$datas, $val)) {
-            return $val;
-        }
-    }
-
-    public static function id($val)
-    {
-        if (!empty(self::$datas[$id])) {
-            return self::$datas[$id];
-        } elseif(false !== ($key = array_search(self::$datas, $val))) {
-            return $key;
-        }
-    }
 }
