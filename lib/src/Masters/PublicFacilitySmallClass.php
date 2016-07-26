@@ -104,5 +104,6 @@ class PublicFacilitySmallClass extends \Converter\Master
         '19012' => 'その他の社会福祉施設',
         '19013' => '保育所',
         '19014' => 'へき地保育所',
+        '99999' => 'その他',
     );
 }

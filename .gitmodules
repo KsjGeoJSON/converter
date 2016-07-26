@@ -1,18 +1,18 @@
 [submodule "AdministrativeBoundary"]
 	path = AdministrativeBoundary
-	url = git@github.com:KsjGeoJSON/AdministrativeBoundary.git
+	url = git@kijtra.github.com:KsjGeoJSON/AdministrativeBoundary.git
 [submodule "ElementarySchoolDistrict"]
 	path = ElementarySchoolDistrict
-	url = git@github.com:KsjGeoJSON/ElementarySchoolDistrict.git
+	url = git@kijtra.github.com:KsjGeoJSON/ElementarySchoolDistrict.git
 [submodule "MiddleSchoolDistrict"]
 	path = MiddleSchoolDistrict
-	url = git@github.com:KsjGeoJSON/MiddleSchoolDistrict.git
+	url = git@kijtra.github.com:KsjGeoJSON/MiddleSchoolDistrict.git
 [submodule "MedicalArea"]
 	path = MedicalArea
-	url = git@github.com:KsjGeoJSON/MedicalArea.git
+	url = git@kijtra.github.com:KsjGeoJSON/MedicalArea.git
 [submodule "PublicFacility"]
 	path = PublicFacility
-	url = git@github.com:KsjGeoJSON/PublicFacility.git
+	url = git@kijtra.github.com:KsjGeoJSON/PublicFacility.git
 [submodule "WelfareInstitution"]
 	path = WelfareInstitution
 	url = git@kijtra.github.com:KsjGeoJSON/WelfareInstitution.git
@@ -20,3 +20,6 @@
 [submodule "AttractCustomersFacility"]
 	path = AttractCustomersFacility
 	url = git@kijtra.github.com:KsjGeoJSON/AttractCustomersFacility.git
+[submodule "School"]
+	path = School
+	url = git@kijtra.github.com:KsjGeoJSON/School.git

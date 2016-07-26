@@ -20,7 +20,7 @@ class Master
         } elseif(false !== array_search($val, static::$datas)) {
             return $val;
         } else {
-            cli()->lightRed('City "'.$val.'" not found!');
+            cli()->lightRed('"'.$val.'" not found! at '.get_called_class());
         }
     }
 
